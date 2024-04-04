@@ -12,7 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    
+    - name: Print env for debug
+      run: |
+        echo "DOCKER_HUB_USERNAME=${{ secrets.DOCKER_HUB_USERNAME }}"
+    
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
 
